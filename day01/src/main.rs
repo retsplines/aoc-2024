@@ -36,11 +36,11 @@ fn main() {
     let zip_iter = list_a.iter().zip(list_b.iter());
 
     // Sum the columns
-    let mut total = 0;
-    for pair in zip_iter {
-        total += pair.0.abs_diff(*(pair.1));
-    }
-    
+    let total: u32 = zip_iter
+        .map(|pair| -> u32 { pair.0.abs_diff(*(pair.1)) } )
+        .sum()
+    ;    
+
     println!("{}", total);
 
 }
