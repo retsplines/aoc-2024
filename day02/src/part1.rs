@@ -28,9 +28,8 @@ fn main() {
         ).collect();
 
         // Check the line
-        match check(&int_levels) {
-            Safety::Safe => safe_lines += 1,
-            Safety::Unsafe(_unsafe_reason) => continue,
+        if check(&int_levels) == Safety::Safe {
+            safe_lines += 1;
         }
     }
 
