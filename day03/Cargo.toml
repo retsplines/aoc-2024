@@ -1,0 +1,6 @@
+[package]
+name = "aoc-2024-day03"
+version = "0.1.0"
+
+[dependencies]
+nom = "7.1.3"
