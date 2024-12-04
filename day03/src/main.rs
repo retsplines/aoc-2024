@@ -49,7 +49,7 @@ impl State {
 
          // If the character is numeric, add it to the appropriate argument
          match v {
-            '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' => match stage {
+            '0'..='9' => match stage {
 
                // Start either of the arguments
                ArgumentsStage::StartOfFirst =>
